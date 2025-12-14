@@ -71,6 +71,16 @@
         width: 100%;
     }
 
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .dropdown-arrow {
+        margin-left: auto;
+    }
+
     .nav-dropdown-menu {
         position: static;
         margin-top: 0;
@@ -83,6 +93,7 @@
         visibility: visible;
         transform: none;
         display: none;
+        padding: 0;
     }
 
     .nav-item-dropdown.active .nav-dropdown-menu {
@@ -91,7 +102,14 @@
 
     .nav-dropdown-link {
         padding: 12px 20px;
-        padding-left: 40px;
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-dropdown-link:hover,
+    .nav-dropdown-link.active {
+        padding-left: 25px;
     }
     
     .hero-title {
