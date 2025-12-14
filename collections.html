@@ -46,13 +46,16 @@
         </div>
     </section>
 
-    <!-- Volume Filter Buttons -->
+    <!-- Volume Filter Dropdown -->
     <section class="volume-filter-section">
         <div class="container">
-            <div class="volume-filters">
-                <button class="volume-filter-btn active" data-volume="all">All Collections</button>
-                <button class="volume-filter-btn" data-volume="volume1">Volume 1: The Jahanara Edit</button>
-                <button class="volume-filter-btn" data-volume="volume2">Volume 2: The Elara Edit</button>
+            <div class="volume-filter-wrapper">
+                <label for="volumeFilter" class="volume-filter-label">Filter Collections:</label>
+                <select id="volumeFilter" class="volume-filter-select" aria-label="Select collection volume">
+                    <option value="all" selected>All Collections</option>
+                    <option value="volume1">Volume 1: The Jahanara Edit</option>
+                    <option value="volume2">Volume 2: The Elara Edit</option>
+                </select>
             </div>
         </div>
     </section>

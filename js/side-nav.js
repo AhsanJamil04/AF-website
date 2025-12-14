@@ -178,11 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Handle volume filter changes
-    const filterButtons = document.querySelectorAll('.volume-filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const volume = this.getAttribute('data-volume');
+    // Handle volume filter changes (dropdown)
+    const volumeFilterSelect = document.getElementById('volumeFilter');
+    if (volumeFilterSelect) {
+        volumeFilterSelect.addEventListener('change', function() {
+            const volume = this.value;
             
             // Update side nav visibility
             navItems.forEach(item => {
@@ -194,6 +194,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    });
+    }
 });
 

@@ -1,7 +1,9 @@
 // Collections Filter - Volume 1 & Volume 2
 document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.volume-filter-btn');
+    const volumeFilterSelect = document.getElementById('volumeFilter');
     const collectionSections = document.querySelectorAll('.collection-section[data-volume]');
+
+    if (!volumeFilterSelect) return;
 
     // Initialize: Show all collections by default
     function showAllCollections() {
@@ -33,31 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add click event listeners to filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get the volume filter value
-            const volume = this.getAttribute('data-volume');
-            
-            // Filter collections
-            filterByVolume(volume);
-        });
+    // Add change event listener to dropdown
+    volumeFilterSelect.addEventListener('change', function() {
+        const volume = this.value;
+        filterByVolume(volume);
     });
 
     // Check URL hash on page load
     const hash = window.location.hash;
     if (hash === '#volume1' || hash === '#volume2') {
         const volume = hash.substring(1);
-        const button = document.querySelector(`.volume-filter-btn[data-volume="${volume}"]`);
-        if (button) {
-            button.click();
-        }
+        volumeFilterSelect.value = volume;
+        filterByVolume(volume);
     } else {
         // Show all by default
         showAllCollections();
