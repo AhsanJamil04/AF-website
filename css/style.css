@@ -152,42 +152,76 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Dropdown */
 .nav-item-dropdown {
     position: relative;
+}
+
+.nav-dropdown-trigger {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-.nav-volume-select {
-    padding: 6px 25px 6px 10px;
-    background-color: transparent;
-    border: 1px solid var(--stone);
-    color: var(--charcoal);
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    cursor: pointer;
+.dropdown-arrow {
+    font-size: 0.7rem;
     transition: var(--transition);
-    border-radius: 0;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%232C2C2C' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 10px;
-    min-width: 180px;
+    display: inline-block;
 }
 
-.nav-volume-select:hover {
-    border-color: var(--muted-gold);
+.nav-item-dropdown:hover .dropdown-arrow,
+.nav-item-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
 }
 
-.nav-volume-select:focus {
-    outline: none;
-    border-color: var(--muted-gold);
-}
-
-.nav-volume-select option {
-    padding: 8px;
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
     background-color: var(--ivory);
+    border: 1px solid var(--blush);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 8px 0;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-link {
+    display: block;
+    padding: 10px 20px;
     color: var(--charcoal);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: var(--transition);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.nav-dropdown-link::after {
+    display: none;
+}
+
+.nav-dropdown-link:hover,
+.nav-dropdown-link.active {
+    background-color: var(--champagne);
+    color: var(--muted-gold);
+    padding-left: 25px;
+}
+
+.nav-dropdown-link.active {
+    font-weight: 500;
+    border-left: 3px solid var(--muted-gold);
 }
 
 .menu-toggle {

@@ -42,10 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Update nav dropdown
-        if (navVolumeFilter) {
-            navVolumeFilter.value = volume;
-        }
+        // Update nav dropdown active state
+        navDropdownLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-volume') === volume) {
+                link.classList.add('active');
+            }
+        });
     }
 
     // Add click event listeners to filter buttons
@@ -56,11 +59,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add change event listener to nav dropdown
-    if (navVolumeFilter) {
-        navVolumeFilter.addEventListener('change', function() {
-            const volume = this.value;
+    // Handle nav dropdown menu clicks
+    const navDropdownLinks = document.querySelectorAll('.nav-dropdown-link');
+    const navItemDropdown = document.querySelector('.nav-item-dropdown');
+    
+    navDropdownLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const volume = this.getAttribute('data-volume');
+            
+            // Update active state
+            navDropdownLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter collections
             filterByVolume(volume);
+            
+            // Close dropdown on mobile
+            if (window.innerWidth <= 768) {
+                navItemDropdown?.classList.remove('active');
+            }
+        });
+    });
+
+    // Toggle dropdown on click (mobile)
+    const navDropdownTrigger = document.querySelector('.nav-dropdown-trigger');
+    if (navDropdownTrigger && window.innerWidth <= 768) {
+        navDropdownTrigger.addEventListener('click', function(e) {
+            if (navItemDropdown) {
+                e.preventDefault();
+                navItemDropdown.classList.toggle('active');
+            }
         });
     }
 

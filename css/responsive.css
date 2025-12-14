@@ -68,17 +68,30 @@
     }
 
     .nav-item-dropdown {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
         width: 100%;
     }
 
-    .nav-volume-select {
+    .nav-dropdown-menu {
+        position: static;
+        margin-top: 0;
+        margin-left: 0;
         width: 100%;
-        min-width: auto;
-        padding: 10px 30px 10px 15px;
-        font-size: 0.9rem;
+        box-shadow: none;
+        border: none;
+        border-top: 1px solid var(--blush);
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .nav-item-dropdown.active .nav-dropdown-menu {
+        display: block;
+    }
+
+    .nav-dropdown-link {
+        padding: 12px 20px;
+        padding-left: 40px;
     }
     
     .hero-title {
