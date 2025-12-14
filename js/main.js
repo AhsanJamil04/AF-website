@@ -109,17 +109,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Contact Form handling - Formspree integration
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For now, we'll just show a success message
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
             const formSuccess = document.getElementById('contactFormSuccess');
-            if (formSuccess) {
-                contactForm.style.display = 'none';
-                formSuccess.style.display = 'block';
-                contactForm.reset();
+            
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            try {
+                // Get form data
+                const formData = new FormData(this);
+                
+                // Submit to Formspree
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - show success message
+                    if (formSuccess) {
+                        this.style.display = 'none';
+                        formSuccess.style.display = 'block';
+                        this.reset();
+                    }
+                } else {
+                    // Handle error
+                    const data = await response.json();
+                    if (data.errors) {
+                        alert('There was an error sending your message. Please try again.');
+                    } else {
+                        alert('There was an error sending your message. Please try again.');
+                    }
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            } catch (error) {
+                // Network error or other issue
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please check your connection and try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
             }
         });
     }
