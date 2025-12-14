@@ -65,15 +65,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navDropdownLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            // Only prevent default if we're already on collections page
+            if (window.location.pathname.includes('collections.html')) {
+                e.preventDefault();
+            }
+            
             const volume = this.getAttribute('data-volume');
             
             // Update active state
             navDropdownLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
             
-            // Filter collections
-            filterByVolume(volume);
+            // Filter collections (if on collections page)
+            if (window.location.pathname.includes('collections.html')) {
+                filterByVolume(volume);
+            } else {
+                // If on another page, navigate with hash
+                window.location.href = `collections.html#${volume}`;
+            }
             
             // Close dropdown on mobile
             if (window.innerWidth <= 768) {
