@@ -46,369 +46,400 @@
         </div>
     </section>
 
+    <!-- Volume Filter Buttons -->
+    <section class="volume-filter-section">
+        <div class="container">
+            <div class="volume-filters">
+                <button class="volume-filter-btn active" data-volume="all">All Collections</button>
+                <button class="volume-filter-btn" data-volume="volume1">Volume 1: The Jahanara Edit</button>
+                <button class="volume-filter-btn" data-volume="volume2">Volume 2: The Elara Edit</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Volume 1: The Jahanara Edit -->
-    <section id="volume1" class="collection-section">
+    <section id="volume1" class="collection-section" data-volume="volume1">
         <div class="container">
             <div class="collection-header">
                 <h2 class="section-title">Volume 1: The Jahanara Edit</h2>
                 <p class="collection-description">A celebration of regal elegance and timeless beauty</p>
             </div>
-            
-            <!-- Gul Afshan -->
-            <div class="piece-section">
-                <h3 class="piece-title">Gul Afshan</h3>
-                <div class="slideshow-container" data-piece="gul-afshan">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Gul Afshan/ASF09290.JPG" alt="Gul Afshan">
+
+            <!-- Bridal Section -->
+            <div class="category-section" data-category="bridal">
+                <h3 class="category-title">Bridal Couture</h3>
+                
+                <!-- Gul Afshan -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Gul Afshan</h4>
+                    <div class="slideshow-container" data-piece="gul-afshan">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Gul Afshan/ASF09290.JPG" alt="Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Gul Afshan/ASF09300.JPG" alt="Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Gul Afshan/ASF09307.JPG" alt="Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Gul Afshan/IZZ03563.JPG" alt="Gul Afshan">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Gul Afshan/ASF09300.JPG" alt="Gul Afshan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Gul Afshan/ASF09307.JPG" alt="Gul Afshan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Gul Afshan/IZZ03563.JPG" alt="Gul Afshan">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
+                </div>
+
+                <!-- Zareen -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Zareen</h4>
+                    <div class="slideshow-container" data-piece="zareen">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Zareen/DSC04648.JPG" alt="Zareen">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Zareen/DSC04657.JPG" alt="Zareen">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Zareen/DSC04659.JPG" alt="Zareen">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Zareen/DSC04661.JPG" alt="Zareen">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- Malika-e-Jahan -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Malika-e-Jahan</h4>
+                    <div class="slideshow-container" data-piece="malika-e-jahan">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Malika-e-Jahan/IZZ03343.JPG" alt="Malika-e-Jahan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Malika-e-Jahan/IZZ03353.JPG" alt="Malika-e-Jahan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Malika-e-Jahan/IZZ03355.JPG" alt="Malika-e-Jahan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Malika-e-Jahan/IZZ03359.JPG" alt="Malika-e-Jahan">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- Shahanara -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Shahanara</h4>
+                    <div class="slideshow-container" data-piece="shahanara">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Shahanara/IZZ02685.JPG" alt="Shahanara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Shahanara/IZZ02688.JPG" alt="Shahanara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Shahanara/IZZ02691.JPG" alt="Shahanara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Shahanara/IZZ02702.JPG" alt="Shahanara">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- DUO: Zareen & Gul Afshan -->
+                <div class="piece-section duo-section">
+                    <h4 class="piece-title">DUO: Zareen & Gul Afshan</h4>
+                    <div class="slideshow-container" data-piece="duo">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/DUO/IZZ03413.JPG" alt="DUO: Zareen & Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/DUO/IZZ03419.JPG" alt="DUO: Zareen & Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/DUO/IZZ03422.JPG" alt="DUO: Zareen & Gul Afshan">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/DUO/IZZ03428.JPG" alt="DUO: Zareen & Gul Afshan">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Zareen -->
-            <div class="piece-section">
-                <h3 class="piece-title">Zareen</h3>
-                <div class="slideshow-container" data-piece="zareen">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Zareen/DSC04648.JPG" alt="Zareen">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Zareen/DSC04657.JPG" alt="Zareen">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Zareen/DSC04659.JPG" alt="Zareen">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Zareen/DSC04661.JPG" alt="Zareen">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
+            <!-- Formal Section -->
+            <div class="category-section" data-category="formal">
+                <h3 class="category-title">Formal Wear</h3>
 
-            <!-- Mahr-un-Nisa (Formal) -->
-            <div class="piece-section">
-                <h3 class="piece-title">Mahr-un-Nisa <span class="piece-type">(Formal)</span></h3>
-                <div class="slideshow-container" data-piece="mahr-un-nisa">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Formal/Mahr-un-Nissa/ASF08909.JPG" alt="Mahr-un-Nisa">
+                <!-- Mahr-un-Nisa (Formal) -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Mahr-un-Nisa</h4>
+                    <div class="slideshow-container" data-piece="mahr-un-nisa">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Formal/Mahr-un-Nissa/ASF08909.JPG" alt="Mahr-un-Nisa">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Mahr-un-Nissa/ASF08914.JPG" alt="Mahr-un-Nisa">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Mahr-un-Nissa/ASF08924.JPG" alt="Mahr-un-Nisa">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Mahr-un-Nissa/ASF08940.JPG" alt="Mahr-un-Nisa">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Formal/Mahr-un-Nissa/ASF08914.JPG" alt="Mahr-un-Nisa">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Mahr-un-Nissa/ASF08924.JPG" alt="Mahr-un-Nisa">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Mahr-un-Nissa/ASF08940.JPG" alt="Mahr-un-Nisa">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
                 </div>
-            </div>
 
-            <!-- Shahana (Formal) -->
-            <div class="piece-section">
-                <h3 class="piece-title">Shahana <span class="piece-type">(Formal)</span></h3>
-                <div class="slideshow-container" data-piece="shahana">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Formal/Shahana/IZZ03739.JPG" alt="Shahana">
+                <!-- Shahana (Formal) -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Shahana</h4>
+                    <div class="slideshow-container" data-piece="shahana">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Formal/Shahana/IZZ03739.JPG" alt="Shahana">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Shahana/IZZ03752.JPG" alt="Shahana">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Shahana/IZZ03759.JPG" alt="Shahana">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Shahana/IZZ03761.JPG" alt="Shahana">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Formal/Shahana/IZZ03752.JPG" alt="Shahana">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Shahana/IZZ03759.JPG" alt="Shahana">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Shahana/IZZ03761.JPG" alt="Shahana">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
                 </div>
-            </div>
 
-            <!-- Malika-e-Jahan -->
-            <div class="piece-section">
-                <h3 class="piece-title">Malika-e-Jahan</h3>
-                <div class="slideshow-container" data-piece="malika-e-jahan">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Malika-e-Jahan/IZZ03343.JPG" alt="Malika-e-Jahan">
+                <!-- Ameera (Formal) -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Ameera</h4>
+                    <div class="slideshow-container" data-piece="ameera">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Formal/Ameera/ASF09098.JPG" alt="Ameera">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Ameera/ASF09102.JPG" alt="Ameera">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Ameera/ASF09127.JPG" alt="Ameera">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Ameera/ASF09130.JPG" alt="Ameera">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Ameera/ASF09134.JPG" alt="Ameera">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Ameera/ASF09142.JPG" alt="Ameera">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Malika-e-Jahan/IZZ03353.JPG" alt="Malika-e-Jahan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Malika-e-Jahan/IZZ03355.JPG" alt="Malika-e-Jahan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Malika-e-Jahan/IZZ03359.JPG" alt="Malika-e-Jahan">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
-
-            <!-- Ameera (Formal) -->
-            <div class="piece-section">
-                <h3 class="piece-title">Ameera <span class="piece-type">(Formal)</span></h3>
-                <div class="slideshow-container" data-piece="ameera">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Formal/Ameera/ASF09098.JPG" alt="Ameera">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Ameera/ASF09102.JPG" alt="Ameera">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Ameera/ASF09127.JPG" alt="Ameera">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Ameera/ASF09130.JPG" alt="Ameera">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Ameera/ASF09134.JPG" alt="Ameera">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Ameera/ASF09142.JPG" alt="Ameera">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
-
-            <!-- Shahanara -->
-            <div class="piece-section">
-                <h3 class="piece-title">Shahanara</h3>
-                <div class="slideshow-container" data-piece="shahanara">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Shahanara/IZZ02685.JPG" alt="Shahanara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Shahanara/IZZ02688.JPG" alt="Shahanara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Shahanara/IZZ02691.JPG" alt="Shahanara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Shahanara/IZZ02702.JPG" alt="Shahanara">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
-
-            <!-- DUO: Zareen & Gul Afshan -->
-            <div class="piece-section duo-section">
-                <h3 class="piece-title">DUO: Zareen & Gul Afshan</h3>
-                <div class="slideshow-container" data-piece="duo">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/DUO/IZZ03413.JPG" alt="DUO: Zareen & Gul Afshan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/DUO/IZZ03419.JPG" alt="DUO: Zareen & Gul Afshan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/DUO/IZZ03422.JPG" alt="DUO: Zareen & Gul Afshan">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/DUO/IZZ03428.JPG" alt="DUO: Zareen & Gul Afshan">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Volume 2: The Elara Edit -->
-    <section id="volume2" class="collection-section">
+    <section id="volume2" class="collection-section" data-volume="volume2">
         <div class="container">
             <div class="collection-header">
                 <h2 class="section-title">Volume 2: The Elara Edit</h2>
                 <p class="collection-description">Modern sophistication meets timeless elegance</p>
             </div>
 
-            <!-- Sofia (Formal) -->
-            <div class="piece-section">
-                <h3 class="piece-title">Sofia <span class="piece-type">(Formal)</span></h3>
-                <div class="slideshow-container" data-piece="sofia">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Formal/Sofia/ASF09615.JPG" alt="Sofia">
+            <!-- Bridal Section -->
+            <div class="category-section" data-category="bridal">
+                <h3 class="category-title">Bridal Couture</h3>
+
+                <!-- Ayla -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Ayla</h4>
+                    <div class="slideshow-container" data-piece="ayla">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Ayla/ASF09493.JPG" alt="Ayla">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Ayla/ASF09506.JPG" alt="Ayla">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Ayla/ASF09521.JPG" alt="Ayla">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Ayla/ASF09531.JPG" alt="Ayla">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Formal/Sofia/ASF09628.JPG" alt="Sofia">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Sofia/ASF09645.JPG" alt="Sofia">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Sofia/ASF09648.JPG" alt="Sofia">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
+                </div>
+
+                <!-- Faiza -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Faiza</h4>
+                    <div class="slideshow-container" data-piece="faiza">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Faiza/ASF09851.JPG" alt="Faiza">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Faiza/ASF09860.JPG" alt="Faiza">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Faiza/ASF09865.JPG" alt="Faiza">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Faiza/ASF09894.JPG" alt="Faiza">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- Kaia -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Kaia</h4>
+                    <div class="slideshow-container" data-piece="kaia">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Kaia/ASF09690.JPG" alt="Kaia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Kaia/ASF09699.JPG" alt="Kaia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Kaia/ASF09712.JPG" alt="Kaia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Kaia/ASF09724.JPG" alt="Kaia">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
+                </div>
+
+                <!-- Inara -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Inara</h4>
+                    <div class="slideshow-container" data-piece="inara">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Bridal/Inara/DSC04679.JPG" alt="Inara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Inara/DSC04685.JPG" alt="Inara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Inara/DSC04690.JPG" alt="Inara">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Bridal/Inara/DSC04691.JPG" alt="Inara">
+                            </div>
+                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Ayla -->
-            <div class="piece-section">
-                <h3 class="piece-title">Ayla</h3>
-                <div class="slideshow-container" data-piece="ayla">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Ayla/ASF09493.JPG" alt="Ayla">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Ayla/ASF09506.JPG" alt="Ayla">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Ayla/ASF09521.JPG" alt="Ayla">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Ayla/ASF09531.JPG" alt="Ayla">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
+            <!-- Formal Section -->
+            <div class="category-section" data-category="formal">
+                <h3 class="category-title">Formal Wear</h3>
 
-            <!-- Laila (Formal) -->
-            <div class="piece-section">
-                <h3 class="piece-title">Laila <span class="piece-type">(Formal)</span></h3>
-                <div class="slideshow-container" data-piece="laila">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Formal/Laila/ASF09338.JPG" alt="Laila">
+                <!-- Sofia (Formal) -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Sofia</h4>
+                    <div class="slideshow-container" data-piece="sofia">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Formal/Sofia/ASF09615.JPG" alt="Sofia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Sofia/ASF09628.JPG" alt="Sofia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Sofia/ASF09645.JPG" alt="Sofia">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Sofia/ASF09648.JPG" alt="Sofia">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Formal/Laila/ASF09340.JPG" alt="Laila">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Laila/ASF09366.JPG" alt="Laila">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Laila/ASF09379.JPG" alt="Laila">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Laila/ASF09382.JPG" alt="Laila">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Formal/Laila/ASF09387.JPG" alt="Laila">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
                 </div>
-            </div>
 
-            <!-- Faiza -->
-            <div class="piece-section">
-                <h3 class="piece-title">Faiza</h3>
-                <div class="slideshow-container" data-piece="faiza">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Faiza/ASF09851.JPG" alt="Faiza">
+                <!-- Laila (Formal) -->
+                <div class="piece-section">
+                    <h4 class="piece-title">Laila</h4>
+                    <div class="slideshow-container" data-piece="laila">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="images/Formal/Laila/ASF09338.JPG" alt="Laila">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Laila/ASF09340.JPG" alt="Laila">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Laila/ASF09366.JPG" alt="Laila">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Laila/ASF09379.JPG" alt="Laila">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Laila/ASF09382.JPG" alt="Laila">
+                            </div>
+                            <div class="slide">
+                                <img src="images/Formal/Laila/ASF09387.JPG" alt="Laila">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Faiza/ASF09860.JPG" alt="Faiza">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Faiza/ASF09865.JPG" alt="Faiza">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Faiza/ASF09894.JPG" alt="Faiza">
-                        </div>
+                        <button class="slideshow-prev" aria-label="Previous">‹</button>
+                        <button class="slideshow-next" aria-label="Next">›</button>
+                        <div class="slideshow-indicators"></div>
                     </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
-
-            <!-- Kaia -->
-            <div class="piece-section">
-                <h3 class="piece-title">Kaia</h3>
-                <div class="slideshow-container" data-piece="kaia">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Kaia/ASF09690.JPG" alt="Kaia">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Kaia/ASF09699.JPG" alt="Kaia">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Kaia/ASF09712.JPG" alt="Kaia">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Kaia/ASF09724.JPG" alt="Kaia">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
-                </div>
-            </div>
-
-            <!-- Inara -->
-            <div class="piece-section">
-                <h3 class="piece-title">Inara</h3>
-                <div class="slideshow-container" data-piece="inara">
-                    <div class="slideshow-wrapper">
-                        <div class="slide active">
-                            <img src="images/Bridal/Inara/DSC04679.JPG" alt="Inara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Inara/DSC04685.JPG" alt="Inara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Inara/DSC04690.JPG" alt="Inara">
-                        </div>
-                        <div class="slide">
-                            <img src="images/Bridal/Inara/DSC04691.JPG" alt="Inara">
-                        </div>
-                    </div>
-                    <button class="slideshow-prev" aria-label="Previous">‹</button>
-                    <button class="slideshow-next" aria-label="Next">›</button>
-                    <div class="slideshow-indicators"></div>
                 </div>
             </div>
         </div>
@@ -475,5 +506,6 @@
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/collections-filter.js"></script>
 </body>
 </html>

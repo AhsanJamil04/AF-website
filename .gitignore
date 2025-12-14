@@ -1,6 +1,7 @@
 # Ignore all images by default
 images/Bridal/**
 images/Formal/**
+images/FrontPage/**
 images/Logo.jpeg
 
 # Un-ignore the Logo
@@ -99,6 +100,11 @@ images/Logo.jpeg
 !images/Formal/Sofia/ASF09628.JPG
 !images/Formal/Sofia/ASF09645.JPG
 !images/Formal/Sofia/ASF09648.JPG
+
+# Un-ignore FrontPage images
+!images/FrontPage/
+!images/FrontPage/IZZ04443.JPG
+!images/FrontPage/IZZ03806.JPG
 
 # Python
 __pycache__/
