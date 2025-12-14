@@ -1,5 +1,70 @@
 // Main JavaScript for Ayma & Fatima Atelier
 
+// Email server endpoint (update this to your deployed URL)
+const EMAIL_SERVER_URL = 'http://localhost:5000'; // Change to your server URL in production
+
+// Send appointment confirmation email
+async function sendAppointmentConfirmationEmail(formData) {
+    try {
+        const data = {
+            name: formData.get('name') || '',
+            email: formData.get('email') || '',
+            phone: formData.get('phone') || '',
+            country: formData.get('country') || '',
+            'preferred-location': formData.get('preferred-location') || '',
+            'event-type': formData.get('event-type') || '',
+            'event-date': formData.get('event-date') || '',
+            'interested-in': formData.get('interested-in') || '',
+            'dress-preference': formData.get('dress-preference') || '',
+            'dress-name': formData.get('dress-name') || '',
+            message: formData.get('message') || ''
+        };
+
+        const response = await fetch(`${EMAIL_SERVER_URL}/api/send-appointment-confirmation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            console.error('Failed to send confirmation email');
+        }
+    } catch (error) {
+        console.error('Error sending confirmation email:', error);
+        // Don't show error to user - form submission was successful
+    }
+}
+
+// Send contact confirmation email
+async function sendContactConfirmationEmail(formData) {
+    try {
+        const data = {
+            name: formData.get('name') || '',
+            email: formData.get('email') || '',
+            phone: formData.get('phone') || '',
+            subject: formData.get('subject') || '',
+            message: formData.get('message') || ''
+        };
+
+        const response = await fetch(`${EMAIL_SERVER_URL}/api/send-contact-confirmation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            console.error('Failed to send confirmation email');
+        }
+    } catch (error) {
+        console.error('Error sending confirmation email:', error);
+        // Don't show error to user - form submission was successful
+    }
+}
+
 // Navigation
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
