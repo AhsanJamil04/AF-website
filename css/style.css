@@ -149,6 +149,47 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+/* Navigation Dropdown */
+.nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-volume-select {
+    padding: 6px 25px 6px 10px;
+    background-color: transparent;
+    border: 1px solid var(--stone);
+    color: var(--charcoal);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 0;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%232C2C2C' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 10px;
+    min-width: 180px;
+}
+
+.nav-volume-select:hover {
+    border-color: var(--muted-gold);
+}
+
+.nav-volume-select:focus {
+    outline: none;
+    border-color: var(--muted-gold);
+}
+
+.nav-volume-select option {
+    padding: 8px;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
