@@ -1279,6 +1279,104 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 120px;
 }
 
+/* Phone Input with Country Code */
+.phone-input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.country-code-select {
+    width: 120px !important;
+    flex-shrink: 0;
+    padding: 12px 8px !important;
+    font-size: 0.9rem !important;
+    cursor: pointer;
+}
+
+.phone-input {
+    flex: 1;
+}
+
+/* Date Input Styling */
+.date-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-input {
+    padding-right: 45px !important;
+    cursor: pointer;
+}
+
+.date-icon {
+    position: absolute;
+    right: 15px;
+    pointer-events: none;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Radio Group Styling */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--blush);
+    border-radius: 4px;
+    transition: var(--transition);
+    background-color: var(--ivory);
+}
+
+.radio-label:hover {
+    background-color: var(--champagne);
+    border-color: var(--muted-gold);
+}
+
+.radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--muted-gold);
+}
+
+.radio-label input[type="radio"]:checked + span {
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.radio-label span {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    user-select: none;
+}
+
+.radio-label:has(input[type="radio"]:checked) {
+    background-color: var(--champagne);
+    border-color: var(--muted-gold);
+    border-width: 2px;
+}
+
 .form-success {
     background-color: var(--white);
     padding: 3rem;
