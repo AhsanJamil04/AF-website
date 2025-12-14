@@ -142,6 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Get form data
                 const formData = new FormData(this);
                 
+                // Set reply-to email for auto-reply
+                const email = document.getElementById('contact-email')?.value || '';
+                const replytoField = document.getElementById('contact-replyto-field');
+                if (email && replytoField) {
+                    replytoField.value = email;
+                    formData.set('_replyto', email);
+                }
+                
                 // Submit to Formspree
                 const response = await fetch(this.action, {
                     method: 'POST',
