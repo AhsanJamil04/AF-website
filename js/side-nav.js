@@ -1,6 +1,8 @@
 // Side Navigation with Scroll Spy
 document.addEventListener('DOMContentLoaded', function() {
     const sideNav = document.getElementById('sideNav');
+    const sideNavToggle = document.getElementById('sideNavToggle');
+    const sideNavOverlay = document.getElementById('sideNavOverlay');
     const pieceSections = document.querySelectorAll('.piece-section[id]');
     const navLinks = document.querySelectorAll('.nav-dress-link');
     const volumeLinks = document.querySelectorAll('.nav-volume-link');
@@ -8,15 +10,53 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!sideNav || pieceSections.length === 0) return;
 
-    // Show side nav after scrolling past header
+    // Mobile toggle functionality
+    function toggleSideNav() {
+        sideNav.classList.toggle('visible');
+        if (sideNavOverlay) {
+            sideNavOverlay.classList.toggle('active');
+        }
+        if (sideNavToggle) {
+            sideNavToggle.classList.toggle('active');
+        }
+    }
+
+    // Close side nav
+    function closeSideNav() {
+        sideNav.classList.remove('visible');
+        if (sideNavOverlay) {
+            sideNavOverlay.classList.remove('active');
+        }
+        if (sideNavToggle) {
+            sideNavToggle.classList.remove('active');
+        }
+    }
+
+    // Toggle button event
+    if (sideNavToggle) {
+        sideNavToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleSideNav();
+        });
+    }
+
+    // Overlay click to close
+    if (sideNavOverlay) {
+        sideNavOverlay.addEventListener('click', closeSideNav);
+    }
+
+    // Show side nav after scrolling past header (desktop only)
     function checkScrollPosition() {
-        const scrollY = window.scrollY;
-        const headerHeight = document.querySelector('.page-header')?.offsetHeight || 0;
-        
-        if (scrollY > headerHeight + 100) {
-            sideNav.classList.add('visible');
-        } else {
-            sideNav.classList.remove('visible');
+        // Only auto-show on desktop (screens wider than 1024px)
+        if (window.innerWidth > 1024) {
+            const scrollY = window.scrollY;
+            const headerHeight = document.querySelector('.page-header')?.offsetHeight || 0;
+            
+            if (scrollY > headerHeight + 100) {
+                sideNav.classList.add('visible');
+            } else {
+                sideNav.classList.remove('visible');
+            }
         }
     }
 
@@ -86,6 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Update active link immediately
                 navLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
+                
+                // Close side nav on mobile after clicking
+                if (window.innerWidth <= 1024) {
+                    setTimeout(closeSideNav, 300);
+                }
             }
         });
     });
@@ -113,6 +158,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 ticking = false;
             });
             ticking = true;
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        // Close side nav when switching from mobile to desktop
+        if (window.innerWidth > 1024) {
+            if (sideNavOverlay) {
+                sideNavOverlay.classList.remove('active');
+            }
+            if (sideNavToggle) {
+                sideNavToggle.classList.remove('active');
+            }
+            checkScrollPosition();
+        } else {
+            // On mobile, don't auto-show
+            sideNav.classList.remove('visible');
         }
     });
 

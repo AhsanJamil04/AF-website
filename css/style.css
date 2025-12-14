@@ -1524,10 +1524,102 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(212, 175, 55, 0.1);
 }
 
-/* Responsive: Hide side nav on mobile */
+/* Mobile Side Nav Toggle Button */
+.side-nav-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--charcoal);
+    color: var(--ivory);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 998;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    align-items: center;
+    justify-content: center;
+}
+
+.side-nav-toggle:hover {
+    background-color: var(--muted-gold);
+    transform: scale(1.1);
+}
+
+.side-nav-toggle.active {
+    background-color: var(--muted-gold);
+}
+
+/* Responsive: Mobile Side Nav */
 @media (max-width: 1024px) {
     .side-nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        max-height: 100vh;
+        transform: none;
+        transition: right 0.3s ease;
+        border: none;
+        border-left: 1px solid var(--blush);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .side-nav.visible {
+        right: 0;
+    }
+
+    .side-nav-toggle {
+        display: flex;
+    }
+
+    /* Overlay when menu is open */
+    .side-nav-overlay {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 997;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .side-nav-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-nav {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .side-nav-content {
+        padding: 15px;
+    }
+
+    .side-nav-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .nav-volume-link {
+        font-size: 0.95rem;
+    }
+
+    .nav-dress-link {
+        font-size: 0.8rem;
+        padding: 5px 6px;
     }
 }
 
