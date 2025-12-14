@@ -1,0 +1,135 @@
+# Ignore all images by default
+images/Bridal/**
+images/Formal/**
+images/Logo.jpeg
+
+# Un-ignore the Logo
+!images/Logo.jpeg
+
+# Un-ignore specific Bridal folders (must come before file patterns)
+!images/Bridal/Ayla/
+!images/Bridal/DUO/
+!images/Bridal/Faiza/
+!images/Bridal/Gul Afshan/
+!images/Bridal/Inara/
+!images/Bridal/Kaia/
+!images/Bridal/Malika-e-Jahan/
+!images/Bridal/Shahanara/
+!images/Bridal/Zareen/
+
+# Un-ignore specific Bridal images
+!images/Bridal/Ayla/ASF09493.JPG
+!images/Bridal/Ayla/ASF09506.JPG
+!images/Bridal/Ayla/ASF09521.JPG
+!images/Bridal/Ayla/ASF09531.JPG
+
+!images/Bridal/DUO/IZZ03413.JPG
+!images/Bridal/DUO/IZZ03419.JPG
+!images/Bridal/DUO/IZZ03422.JPG
+!images/Bridal/DUO/IZZ03428.JPG
+
+!images/Bridal/Faiza/ASF09851.JPG
+!images/Bridal/Faiza/ASF09860.JPG
+!images/Bridal/Faiza/ASF09865.JPG
+!images/Bridal/Faiza/ASF09894.JPG
+
+!images/Bridal/Gul Afshan/ASF09290.JPG
+!images/Bridal/Gul Afshan/ASF09300.JPG
+!images/Bridal/Gul Afshan/ASF09307.JPG
+!images/Bridal/Gul Afshan/IZZ03563.JPG
+
+!images/Bridal/Inara/DSC04679.JPG
+!images/Bridal/Inara/DSC04685.JPG
+!images/Bridal/Inara/DSC04690.JPG
+!images/Bridal/Inara/DSC04691.JPG
+
+!images/Bridal/Kaia/ASF09690.JPG
+!images/Bridal/Kaia/ASF09699.JPG
+!images/Bridal/Kaia/ASF09712.JPG
+!images/Bridal/Kaia/ASF09724.JPG
+
+!images/Bridal/Malika-e-Jahan/IZZ03343.JPG
+!images/Bridal/Malika-e-Jahan/IZZ03353.JPG
+!images/Bridal/Malika-e-Jahan/IZZ03355.JPG
+!images/Bridal/Malika-e-Jahan/IZZ03359.JPG
+
+!images/Bridal/Shahanara/IZZ02685.JPG
+!images/Bridal/Shahanara/IZZ02688.JPG
+!images/Bridal/Shahanara/IZZ02691.JPG
+!images/Bridal/Shahanara/IZZ02702.JPG
+
+!images/Bridal/Zareen/DSC04648.JPG
+!images/Bridal/Zareen/DSC04657.JPG
+!images/Bridal/Zareen/DSC04659.JPG
+!images/Bridal/Zareen/DSC04661.JPG
+
+# Un-ignore specific Formal folders
+!images/Formal/Ameera/
+!images/Formal/Laila/
+!images/Formal/Mahr-un-Nissa/
+!images/Formal/Shahana/
+!images/Formal/Sofia/
+
+# Un-ignore specific Formal images
+!images/Formal/Ameera/ASF09098.JPG
+!images/Formal/Ameera/ASF09102.JPG
+!images/Formal/Ameera/ASF09127.JPG
+!images/Formal/Ameera/ASF09130.JPG
+!images/Formal/Ameera/ASF09134.JPG
+!images/Formal/Ameera/ASF09142.JPG
+
+!images/Formal/Laila/ASF09338.JPG
+!images/Formal/Laila/ASF09340.JPG
+!images/Formal/Laila/ASF09366.JPG
+!images/Formal/Laila/ASF09379.JPG
+!images/Formal/Laila/ASF09382.JPG
+!images/Formal/Laila/ASF09387.JPG
+
+!images/Formal/Mahr-un-Nissa/ASF08909.JPG
+!images/Formal/Mahr-un-Nissa/ASF08914.JPG
+!images/Formal/Mahr-un-Nissa/ASF08924.JPG
+!images/Formal/Mahr-un-Nissa/ASF08940.JPG
+
+!images/Formal/Shahana/IZZ03739.JPG
+!images/Formal/Shahana/IZZ03752.JPG
+!images/Formal/Shahana/IZZ03759.JPG
+!images/Formal/Shahana/IZZ03761.JPG
+
+!images/Formal/Sofia/ASF09615.JPG
+!images/Formal/Sofia/ASF09628.JPG
+!images/Formal/Sofia/ASF09645.JPG
+!images/Formal/Sofia/ASF09648.JPG
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Server (optional - you may want to commit this)
+# server.py

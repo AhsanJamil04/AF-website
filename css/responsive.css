@@ -1,0 +1,145 @@
+/* ============================================
+   Responsive Styles
+   Mobile-First Approach
+   ============================================ */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .collections-grid,
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-content,
+    .story-content,
+    .philosophy-content,
+    .feature-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .reach-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .expectations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--ivory);
+        flex-direction: column;
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .collections-grid,
+    .locations-grid,
+    .reach-content,
+    .behind-scenes-grid,
+    .process-grid,
+    .expectations-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .appointment-form,
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .highlight-image,
+    .story-image,
+    .philosophy-image,
+    .feature-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+

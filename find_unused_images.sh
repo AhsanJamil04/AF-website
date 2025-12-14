@@ -1,0 +1,83 @@
+#!/bin/bash
+# Find all images in the images directory
+# Compare with used images and list unused ones
+
+USED_IMAGES=(
+    "images/Logo.jpeg"
+    "images/Bridal/Gul Afshan/ASF09290.JPG"
+    "images/Bridal/Gul Afshan/ASF09300.JPG"
+    "images/Bridal/Gul Afshan/ASF09307.JPG"
+    "images/Bridal/Gul Afshan/IZZ03563.JPG"
+    "images/Bridal/Zareen/DSC04648.JPG"
+    "images/Bridal/Zareen/DSC04657.JPG"
+    "images/Bridal/Zareen/DSC04659.JPG"
+    "images/Bridal/Zareen/DSC04661.JPG"
+    "images/Formal/Mahr-un-Nissa/ASF08909.JPG"
+    "images/Formal/Mahr-un-Nissa/ASF08914.JPG"
+    "images/Formal/Mahr-un-Nissa/ASF08924.JPG"
+    "images/Formal/Mahr-un-Nissa/ASF08940.JPG"
+    "images/Formal/Shahana/IZZ03739.JPG"
+    "images/Formal/Shahana/IZZ03752.JPG"
+    "images/Formal/Shahana/IZZ03759.JPG"
+    "images/Formal/Shahana/IZZ03761.JPG"
+    "images/Bridal/Malika-e-Jahan/IZZ03343.JPG"
+    "images/Bridal/Malika-e-Jahan/IZZ03353.JPG"
+    "images/Bridal/Malika-e-Jahan/IZZ03355.JPG"
+    "images/Bridal/Malika-e-Jahan/IZZ03359.JPG"
+    "images/Formal/Ameera/ASF09098.JPG"
+    "images/Formal/Ameera/ASF09102.JPG"
+    "images/Formal/Ameera/ASF09127.JPG"
+    "images/Formal/Ameera/ASF09130.JPG"
+    "images/Formal/Ameera/ASF09134.JPG"
+    "images/Formal/Ameera/ASF09142.JPG"
+    "images/Bridal/Shahanara/IZZ02685.JPG"
+    "images/Bridal/Shahanara/IZZ02688.JPG"
+    "images/Bridal/Shahanara/IZZ02691.JPG"
+    "images/Bridal/Shahanara/IZZ02702.JPG"
+    "images/Bridal/DUO/IZZ03413.JPG"
+    "images/Bridal/DUO/IZZ03419.JPG"
+    "images/Bridal/DUO/IZZ03422.JPG"
+    "images/Bridal/DUO/IZZ03428.JPG"
+    "images/Formal/Sofia/ASF09615.JPG"
+    "images/Formal/Sofia/ASF09628.JPG"
+    "images/Formal/Sofia/ASF09645.JPG"
+    "images/Formal/Sofia/ASF09648.JPG"
+    "images/Bridal/Ayla/ASF09493.JPG"
+    "images/Bridal/Ayla/ASF09506.JPG"
+    "images/Bridal/Ayla/ASF09521.JPG"
+    "images/Bridal/Ayla/ASF09531.JPG"
+    "images/Formal/Laila/ASF09338.JPG"
+    "images/Formal/Laila/ASF09340.JPG"
+    "images/Formal/Laila/ASF09366.JPG"
+    "images/Formal/Laila/ASF09379.JPG"
+    "images/Formal/Laila/ASF09382.JPG"
+    "images/Formal/Laila/ASF09387.JPG"
+    "images/Bridal/Faiza/ASF09851.JPG"
+    "images/Bridal/Faiza/ASF09860.JPG"
+    "images/Bridal/Faiza/ASF09865.JPG"
+    "images/Bridal/Faiza/ASF09894.JPG"
+    "images/Bridal/Kaia/ASF09690.JPG"
+    "images/Bridal/Kaia/ASF09699.JPG"
+    "images/Bridal/Kaia/ASF09712.JPG"
+    "images/Bridal/Kaia/ASF09724.JPG"
+    "images/Bridal/Inara/DSC04679.JPG"
+    "images/Bridal/Inara/DSC04685.JPG"
+    "images/Bridal/Inara/DSC04690.JPG"
+    "images/Bridal/Inara/DSC04691.JPG"
+)
+
+# Find all image files
+find images -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.JPG" -o -iname "*.JPEG" -o -iname "*.PNG" \) | while read img; do
+    # Check if this image is in the used list
+    found=0
+    for used in "${USED_IMAGES[@]}"; do
+        if [ "$img" = "$used" ]; then
+            found=1
+            break
+        fi
+    done
+    
+    if [ $found -eq 0 ]; then
+        echo "$img"
+    fi
+done
