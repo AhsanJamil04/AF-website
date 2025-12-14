@@ -178,34 +178,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Handle volume filter changes (buttons and nav dropdown)
+    // Handle filter changes (buttons and nav dropdown)
     const filterButtons = document.querySelectorAll('.volume-filter-btn');
     const navDropdownLinks = document.querySelectorAll('.nav-dropdown-link');
     
-    function updateSideNavVisibility(volume) {
-        navItems.forEach(item => {
-            if (volume === 'all') {
+    function updateSideNavVisibility(filter) {
+        if (filter === 'all') {
+            navItems.forEach(item => {
                 item.style.display = '';
-            } else {
+            });
+        } else if (filter === 'bridal' || filter === 'formal') {
+            // Show all volumes, but highlight the category
+            navItems.forEach(item => {
+                item.style.display = '';
+            });
+        } else if (filter === 'volume1' || filter === 'volume2') {
+            // Show only the selected volume
+            navItems.forEach(item => {
                 const itemVolume = item.getAttribute('data-volume');
-                item.style.display = itemVolume === volume ? '' : 'none';
-            }
-        });
+                item.style.display = itemVolume === filter ? '' : 'none';
+            });
+        }
     }
 
     // Listen to filter button clicks
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const volume = this.getAttribute('data-volume');
-            updateSideNavVisibility(volume);
+            const filter = this.getAttribute('data-filter');
+            updateSideNavVisibility(filter);
         });
     });
 
     // Listen to nav dropdown link clicks
     navDropdownLinks.forEach(link => {
         link.addEventListener('click', function() {
-            const volume = this.getAttribute('data-volume');
-            updateSideNavVisibility(volume);
+            const filter = this.getAttribute('data-filter');
+            updateSideNavVisibility(filter);
         });
     });
 });

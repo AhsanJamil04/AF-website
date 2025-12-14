@@ -193,10 +193,10 @@
     }
 
     .volume-filter-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 10px 15px;
+        font-size: 0.85rem;
         flex: 1;
-        min-width: 140px;
+        min-width: 120px;
     }
 }
 
