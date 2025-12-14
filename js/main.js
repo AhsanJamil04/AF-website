@@ -72,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Get form data
                 const formData = new FormData(this);
                 
+                // Combine country code with phone number
+                const countryCode = document.getElementById('country-code')?.value || '';
+                const phoneNumber = document.getElementById('phone')?.value || '';
+                if (phoneNumber && countryCode) {
+                    formData.set('phone', `${countryCode} ${phoneNumber}`);
+                }
+                
                 // Submit to Formspree
                 const response = await fetch(this.action, {
                     method: 'POST',
