@@ -646,32 +646,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Volume Filter Section */
 .volume-filter-section {
-    padding: 30px 0;
+    padding: 40px 0;
     background-color: var(--ivory);
     border-bottom: 1px solid var(--blush);
     margin-top: 0;
 }
 
-.volume-filter-wrapper {
+.volume-filters {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.volume-filter-label {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    color: var(--charcoal);
-    font-weight: 500;
-    margin: 0;
-}
-
-.volume-filter-select {
-    padding: 12px 20px;
-    padding-right: 40px;
-    background-color: var(--white);
+.volume-filter-btn {
+    padding: 12px 30px;
+    background-color: transparent;
     border: 2px solid var(--stone);
     color: var(--charcoal);
     font-family: var(--font-serif);
@@ -679,29 +669,17 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: var(--transition);
     border-radius: 0;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232C2C2C' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 12px;
-    min-width: 280px;
 }
 
-.volume-filter-select:hover {
-    border-color: var(--muted-gold);
+.volume-filter-btn:hover {
     background-color: var(--champagne);
-}
-
-.volume-filter-select:focus {
-    outline: none;
     border-color: var(--muted-gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
-.volume-filter-select option {
-    padding: 10px;
-    background-color: var(--white);
-    color: var(--charcoal);
+.volume-filter-btn.active {
+    background-color: var(--charcoal);
+    color: var(--ivory);
+    border-color: var(--charcoal);
 }
 
 /* Category Section */

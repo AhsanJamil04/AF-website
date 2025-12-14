@@ -178,21 +178,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Handle volume filter changes (dropdown)
-    const volumeFilterSelect = document.getElementById('volumeFilter');
-    if (volumeFilterSelect) {
-        volumeFilterSelect.addEventListener('change', function() {
+    // Handle volume filter changes (buttons and nav dropdown)
+    const filterButtons = document.querySelectorAll('.volume-filter-btn');
+    const navVolumeFilter = document.getElementById('navVolumeFilter');
+    
+    function updateSideNavVisibility(volume) {
+        navItems.forEach(item => {
+            if (volume === 'all') {
+                item.style.display = '';
+            } else {
+                const itemVolume = item.getAttribute('data-volume');
+                item.style.display = itemVolume === volume ? '' : 'none';
+            }
+        });
+    }
+
+    // Listen to filter button clicks
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const volume = this.getAttribute('data-volume');
+            updateSideNavVisibility(volume);
+        });
+    });
+
+    // Listen to nav dropdown changes
+    if (navVolumeFilter) {
+        navVolumeFilter.addEventListener('change', function() {
             const volume = this.value;
-            
-            // Update side nav visibility
-            navItems.forEach(item => {
-                if (volume === 'all') {
-                    item.style.display = '';
-                } else {
-                    const itemVolume = item.getAttribute('data-volume');
-                    item.style.display = itemVolume === volume ? '' : 'none';
-                }
-            });
+            updateSideNavVisibility(volume);
         });
     }
 });

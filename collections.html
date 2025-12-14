@@ -29,7 +29,14 @@
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="collections.html" class="active">Collections</a>
+                        <select id="navVolumeFilter" class="nav-volume-select" aria-label="Select collection volume">
+                            <option value="all" selected>All Collections</option>
+                            <option value="volume1">Volume 1: The Jahanara Edit</option>
+                            <option value="volume2">Volume 2: The Elara Edit</option>
+                        </select>
+                    </li>
                     <li><a href="craftsmanship.html">Craftsmanship</a></li>
                     <li><a href="appointments.html">Appointments</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -46,16 +53,13 @@
         </div>
     </section>
 
-    <!-- Volume Filter Dropdown -->
+    <!-- Volume Filter Buttons -->
     <section class="volume-filter-section">
         <div class="container">
-            <div class="volume-filter-wrapper">
-                <label for="volumeFilter" class="volume-filter-label">Filter Collections:</label>
-                <select id="volumeFilter" class="volume-filter-select" aria-label="Select collection volume">
-                    <option value="all" selected>All Collections</option>
-                    <option value="volume1">Volume 1: The Jahanara Edit</option>
-                    <option value="volume2">Volume 2: The Elara Edit</option>
-                </select>
+            <div class="volume-filters">
+                <button class="volume-filter-btn active" data-volume="all">All Collections</button>
+                <button class="volume-filter-btn" data-volume="volume1">Volume 1: The Jahanara Edit</button>
+                <button class="volume-filter-btn" data-volume="volume2">Volume 2: The Elara Edit</button>
             </div>
         </div>
     </section>

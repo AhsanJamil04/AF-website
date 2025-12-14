@@ -1,9 +1,8 @@
 // Collections Filter - Volume 1 & Volume 2
 document.addEventListener('DOMContentLoaded', function() {
-    const volumeFilterSelect = document.getElementById('volumeFilter');
+    const filterButtons = document.querySelectorAll('.volume-filter-btn');
+    const navVolumeFilter = document.getElementById('navVolumeFilter');
     const collectionSections = document.querySelectorAll('.collection-section[data-volume]');
-
-    if (!volumeFilterSelect) return;
 
     // Initialize: Show all collections by default
     function showAllCollections() {
@@ -33,19 +32,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+        // Update filter buttons
+        filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-volume') === volume) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Update nav dropdown
+        if (navVolumeFilter) {
+            navVolumeFilter.value = volume;
+        }
     }
 
-    // Add change event listener to dropdown
-    volumeFilterSelect.addEventListener('change', function() {
-        const volume = this.value;
-        filterByVolume(volume);
+    // Add click event listeners to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const volume = this.getAttribute('data-volume');
+            filterByVolume(volume);
+        });
     });
+
+    // Add change event listener to nav dropdown
+    if (navVolumeFilter) {
+        navVolumeFilter.addEventListener('change', function() {
+            const volume = this.value;
+            filterByVolume(volume);
+        });
+    }
 
     // Check URL hash on page load
     const hash = window.location.hash;
     if (hash === '#volume1' || hash === '#volume2') {
         const volume = hash.substring(1);
-        volumeFilterSelect.value = volume;
         filterByVolume(volume);
     } else {
         // Show all by default

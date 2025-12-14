@@ -34,18 +34,13 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .volume-filter-wrapper {
-        flex-direction: column;
-        align-items: stretch;
+    .volume-filters {
+        gap: 15px;
     }
 
-    .volume-filter-label {
-        text-align: center;
-    }
-
-    .volume-filter-select {
-        width: 100%;
-        min-width: auto;
+    .volume-filter-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
     }
 }
 
@@ -70,6 +65,20 @@
     
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-item-dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-volume-select {
+        width: 100%;
+        min-width: auto;
+        padding: 10px 30px 10px 15px;
+        font-size: 0.9rem;
     }
     
     .hero-title {
@@ -135,21 +144,18 @@
     }
 
     .volume-filter-section {
-        padding: 20px 0;
+        padding: 25px 0;
     }
 
-    .volume-filter-wrapper {
+    .volume-filters {
         gap: 10px;
     }
 
-    .volume-filter-label {
-        font-size: 1rem;
-    }
-
-    .volume-filter-select {
-        font-size: 0.95rem;
-        padding: 10px 18px;
-        padding-right: 35px;
+    .volume-filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 140px;
     }
 }
 
