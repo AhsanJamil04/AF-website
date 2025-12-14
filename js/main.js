@@ -231,6 +231,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         formSuccess.style.display = 'block';
                         this.reset();
                     }
+                    
+                    // Send confirmation email to client (don't wait for response)
+                    sendContactConfirmationEmail(formData).catch(err => {
+                        console.error('Email confirmation failed:', err);
+                        // Don't show error to user - form was submitted successfully
+                    });
                 } else {
                     // Handle error
                     const data = await response.json();
